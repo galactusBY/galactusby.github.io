@@ -1,40 +1,219 @@
-/* CSS Variables */
+/* ----------------------- CSS VARIABLES ----------------------- */
 :root {
   --green-border: thin solid green;
 }
 
-/* Main above 700px*/
 
+
+
+
+
+
+/* ---------------------- PAGE/LAYOUT LEVEL ---------------------- */
 body {
   background-color: grey;
 }
 
-.l-grid {
+.l-body {
   display: grid;
   border: var(--green-border);
   grid-template: repeat(4, auto) / repeat(4, 1fr);
   grid-gap: 5px;
 }
 
+/* Grid A */
 .l-header {
   border: var(--green-border);
   grid-area: 1 / 1 / 1 / span 4;
 }
 
+/* Grid B */
 .l-intro {
   border: var(--green-border);
   grid-area: 2 / 1 / 2 / span 4;
 }
 
+/* Grid C */
 .l-portfolio {
   border: var(--green-border);
   grid-area: 3 / 1 / 3 / span 4;
 }
 
+/* Grid D */
 .l-footer {
   border: var(--green-border);
   grid-area: 4 / 1 / 4 / span 4;
 }
+
+/* ----------------------- SECTIONAL LEVEL ----------------------- */
+
+
+/* ---------------- HEADER ---------------- */
+
+/* HEADER LAYOUT [L] */
+
+.l-header__title {}
+
+.l-header__title-socket {}
+
+.l-header__nav {}
+
+.l-header__nav-socket {}
+
+
+/* HEADER COMPONENTS [C] */
+
+.c-title {}
+
+.c-title__text {}
+
+.c-nav {}
+
+.c-nav__list {}
+
+.c-nav__link {}
+
+
+
+/* ---------------- INTRO ---------------- */
+
+/* INTRO LAYOUT [L] */
+
+.l-intro__banner {}
+
+.l-intro__banner-socket {}
+
+
+/* INTRO COMPONENTS [C] */
+
+.c-banner {}
+
+.c-banner__text {}
+
+.c-banner__img {}
+
+
+
+/* ---------------- PORTFOLIO ---------------- */
+
+/* PORTFOLIO LAYOUT [L] */
+
+/* Sub-Grid A */
+.l-portfolio__title {}
+
+.l-portfolio__title-socket {}
+
+
+/* Sub-Grid B */
+.l-portfolio__project-1 {}
+
+.l-portfolio__project-1-socket {}
+
+
+/* Sub-Grid C */
+.l-portfolio__project-2 {}
+
+.l-portfolio__project-2-socket {}
+
+
+/* Sub-Grid D */
+.l-portfolio__project-3 {}
+
+.l-portfolio__project-3-socket {}
+
+
+/* Sub-Grid E */
+.l-portfolio__project-4 {}
+
+.l-portfolio__project-4-socket {}
+
+
+/* PORTFOLIO COMPONENTS [C] */
+
+/* Sub-Grid A */
+
+.c-portfolio-title {}
+
+.c-portfolio-title__text {}
+
+
+/* Sub-Grid B */
+
+.c-project-1 {}
+
+.c-project-1__img {}
+
+.c-project-1__title {}
+
+.c-project-1__disc {}
+
+.c-project-1__link {}
+
+
+/* Sub-Grid C */
+
+.c-project-2 {}
+
+.c-project-1__img {}
+
+.c-project-1__title {}
+
+.c-project-1__disc {}
+
+.c-project-1__link {}
+
+
+/* Sub-Grid D */
+
+.c-project-3 {}
+
+.c-project-1__img {}
+
+.c-project-1__title {}
+
+.c-project-1__disc {}
+
+.c-project-1__link {}
+
+
+/* Sub-Grid E */
+
+.c-project-4 {}
+
+.c-project-1__img {}
+
+.c-project-1__title {}
+
+.c-project-1__disc {}
+
+.c-project-1__link {}
+
+
+
+/* ---------------- FOOTER ---------------- */
+
+/* FOOTER LAYOUT [L] */
+
+.l-footer__contact {}
+
+.l-footer__contact-socket {}
+
+
+/* FOOTER COMPONENTS [C] */
+
+.c-contact {}
+
+.c-contact__title {}
+
+.c-contact__list {}
+
+.c-contact__link {}
+
+.c-contact__img {}
+
+
+
+
 
 
 /* Media queries under 700px */

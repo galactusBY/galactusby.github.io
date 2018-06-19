@@ -1,48 +1,156 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- Developer Notes: -->
+    <!-- Using BEM naming conventions >>> http://getbem.com/naming/ -->
+    <!-- Using Harry Robert’s namespacing techniques >>> https://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/ -->
+    <!-- Use element IDs only for Javascript -->
     <title>Taylor Byron Svendsen</title>
-    <!-- <link rel="stylesheet" type="text/css" href="style-sheet.css"> -->
+    <link rel="stylesheet" type="text/css" href="./css/style-sheet.css">
   </head>
 
   <body>
-    <h1>Taylor Byron Svendsen</h1>
+    <div id="body-wrapper" class="l-body">
 
-    <div class="nav">
-      <ul>
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./about.html">About</a></li>
-        <li><a href="./contact.html">Contact</a></li>
-      </ul>
-    </div>
+      <!-- GRID A -->
+      <div id="header" class="l-header a">
 
-    <div class="portfolio-intro">
-      <h1>Welcome! I am a website developer</h1>
-    </div>
-
-    <div class="case-items">
-      <h1>This is where your work goes:</h1>
-      <ul>
-        <li>Project 1</li>
-        <li>Project 2</li>
-        <li>Project 3</li>
-        <li>Project 4</li>
-      </ul>
-    </div>
-
-    <div class="contact-card">
-      <div class="contact-info">
-        <h1>Here is how you can reach me.</h1>
-        <div class="contact-links">
-          <a class="contact-link contact-link-github" href="https://github.com/galactusBY">GitHub</a>
-          <a class="contact-link contact-link-gmail" href="mailto:taysvendsen@gmail.com">Gmail</a>
-          <a class="contact-link contact-link-linkedin" href="https://www.linkedin.com/in/taylorsvendsen/">Linkedin</a>
+        <!-- This is a Block/Layout (l-header, l-header__title, ect)-->
+        <div class="l-header__title">
+          <div class="l-header__title-socket">
+            <!-- These are Blocks/Components (c-project, c-project__wrapper, ect) -->
+            <div class="c-title">
+              <h1 class="c-title__text">Taylor Byron Svendsen</h1>
+            <div>
+          </div>
         </div>
-        <div class="contact-image">
-          <img src="" alt="">
+
+        <!-- This is a Block/Layout (l-header, l-header__nav-plug, ect)-->
+        <div class="l-header__nav">
+          <div class="l-header__nav-socket">
+            <!-- These are Blocks/Components (c-project, c-project__wrapper, ect) -->
+            <div class="c-nav">
+              <ul class="c-nav__list">
+                <li class="c-nav__link"><a href="./index.html">Home</a></li>
+                <li class="c-nav__link"><a href="./about.html">About</a></li>
+                <li class="c-nav__link"><a href="./contact.html">Contact</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
+
       </div>
-    </div>
+      <!-- GRID A -->
 
+      <!-- GRID B -->
+      <div id="intro" class="l-intro b">
+
+        <!-- This is a Block/Layout (l-intro, l-intro__banner, ect)-->
+        <div class="l-intro__banner">
+          <div class="l-intro__banner-socket">
+            <!-- These are Blocks/Components (c-banner, c-banner__text, ect) -->
+            <div class="c-banner">
+              <h2 class="c-banner__text">Welcome! I am a website developer</h2>
+              <div class="c-banner__img"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- GRID B -->
+
+      <!-- GRID C -->
+      <div id="portfolio" class="l-portfolio c">
+
+        <!-- This is a Block/Layout (l-portfolio, l-portfolio__title, ect)-->
+        <div class="l-portfolio__title">
+          <div class="l-portfolio__title-socket">
+            <!-- These are Blocks/Components (c-portfolio-title, c-portfolio-title__text, ect) -->
+            <div class="c-portfolio-title">
+              <h2 class="c-portfolio-title__text">This is where your work goes:</h2>
+            </div>
+          </div>
+        </div>
+
+        <!-- This is a Block/Layout (l-portfolio, l-portfolio__project-1, ect)-->
+        <div class="l-portfolio__project-1">
+          <div class="l-portfolio__project-1-socket">
+            <!-- These are Blocks/Components (c-project-1, c-project-1__img, ect) -->
+            <div class="c-project-1">
+              <div class="c-project-1__img">Project 1 Background Image</div>
+              <h3 class="c-project-1__title">Project Title</h3>
+              <p class="c-project-1__disc">Project discription: Lorem ipsum dolor sit amet, consectetur adipisicing elit labore libero fugiat officiis iusto provident.</p>
+              <a href="#" class="c-project-1__link"></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- This is a Block/Layout (l-portfolio, l-portfolio__project-2, ect)-->
+        <div class="l-portfolio__project-2">
+          <div class="l-portfolio__project-2-socket">
+            <!-- These are Blocks/Components (c-project-2, c-project-2__img, ect) -->
+            <div class="c-project-2">
+              <div class="c-project-2__img">Project 2 Background Image</div>
+              <h3 class="c-project-2__title">Project Title</h3>
+              <p class="c-project-2__disc">Project discription: Lorem ipsum dolor sit amet, consectetur adipisicing elit labore libero fugiat officiis iusto provident.</p>
+              <a href="#" class="c-project-2__link"></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- This is a Block/Layout (l-portfolio, l-portfolio__project-2, ect)-->
+        <div class="l-portfolio__project-2">
+          <div class="l-portfolio__project-2-socket">
+            <!-- These are Blocks/Components (c-project-2, c-project-2__img, ect) -->
+            <div class="c-project-2">
+              <div class="c-project-2__img">Project 2 Background Image</div>
+              <h3 class="c-project-2__title">Project Title</h3>
+              <p class="c-project-2__disc">Project discription: Lorem ipsum dolor sit amet, consectetur adipisicing elit labore libero fugiat officiis iusto provident.</p>
+              <a href="#" class="c-project-2__link"></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- This is a Block/Layout (l-portfolio, l-portfolio__project-4, ect)-->
+        <div class="l-portfolio__project-4">
+          <div class="l-portfolio__project-4-socket">
+            <!-- These are Blocks/Components (c-project-4, c-project-4__img, ect) -->
+            <div class="c-project-4">
+              <div class="c-project-4__img">Project 4 Background Image</div>
+              <h3 class="c-project-4__title">Project Title</h3>
+              <p class="c-project-4__disc">Project discription: Lorem ipsum dolor sit amet, consectetur adipisicing elit labore libero fugiat officiis iusto provident.</p>
+              <a href="#" class="c-project-4__link"></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- GRID C -->
+
+      <!-- GRID D -->
+      <div id="footer" class="l-footer d">
+
+        <!-- This is a Block/Layout (l-footer, l-footer__contact, ect)-->
+        <div class="l-footer__contact">
+          <div class="l-footer__contact-socket">
+            <!-- These are Blocks/Components (c-contact, c-contact__title, ect) -->
+            <div class="c-contact">
+              <h2 class="c-contact__title">Here is how you can reach me.</h2>
+              <ul class="c-contact__list">
+                <li><a class="c-contact__link" href="https://github.com/galactusBY">GitHub</a></li>
+                <li><a class="c-contact__link" href="mailto:taysvendsen@gmail.com">Gmail</a></li>
+                <li><a class="c-contact__link" href="https://www.linkedin.com/in/taylorsvendsen/">Linkedin</a></li>
+              </ul>
+              <div class="c-contact__img">
+                <img height="100px" width="100px" src="https://i.imgur.com/zwF1Ywf.jpg" alt="portrait-pic">
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- GRID D -->
+
+    </div>
   </body>
 </html>

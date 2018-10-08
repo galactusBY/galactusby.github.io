@@ -1,73 +1,138 @@
-/* ----------------------- CSS VARIABLES ----------------------- */
+/* --------------------------| VARIABLES |----------------------- */
 :root {
-  --green-border: thin solid green;
+  /* --black-border: thick solid black;
+  --purple-border: thick dashed purple; */
+  /* --red-border: medium solid red;
+  --blue-border: thin solid blue; */
+  /* --green-border: medium dotted black; */
+  /* --project-background-1: white;
+  --project-background-2: brown;
+  --project-background-3: blue;
+  --project-background-4: green;
+  --project-background-5: orange; */
+  --font-libre: 'Libre Franklin', sans-serif;
+  --font-ssp: 'Source Sans Pro', sans-serif;
+  --main-margin: 1.5% 12.5% 1.5% 12.5%;
 }
 
 
+/* --------------------------| PAGE/LAYOUT LEVEL |----------------------- */
 
-
-
-
-
-/* ---------------------- PAGE/LAYOUT LEVEL ---------------------- */
 body {
+  /* margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%; */
   background-color: grey;
+  font-family: var(--font-ssp);
+  font-family: var(--font-libre);
 }
 
 .l-body {
+  border: var(--black-border);
   display: grid;
-  border: var(--green-border);
-  grid-template: repeat(4, auto) / repeat(4, 1fr);
-  grid-gap: 5px;
+  grid-template-rows: 1fr 2fr 8fr 2fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
 }
 
 /* Grid A */
 .l-header {
-  border: var(--green-border);
-  grid-area: 1 / 1 / 1 / span 4;
+  border: var(--purple-border);
+  grid-row: 1 / 2;
+  grid-column: 1 / 5;
+
+  background-color: var(--project-background-1);
+  /* background-image: url('https://i.imgur.com/zwF1Ywf.jpg');
+  background-repeat: round; */
+
+  /* Sub Flexbox */
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
 }
 
 /* Grid B */
 .l-intro {
-  border: var(--green-border);
-  grid-area: 2 / 1 / 2 / span 4;
+  border: var(--purple-border);
+  grid-row: 2 / 3;
+  grid-column: 1 / 5;
+
+  background-color: var(--project-background-1);
+  /* background-image: url('https://i.imgur.com/zwF1Ywf.jpg');
+  background-repeat: round; */
+
 }
 
 /* Grid C */
 .l-portfolio {
-  border: var(--green-border);
-  grid-area: 3 / 1 / 3 / span 4;
+  border: var(--purple-border);
+  grid-row: 3 / 4;
+  grid-column: 1 / 5;
+
+  background-color: var(--project-background-1);
+  /* background-image: url('https://i.imgur.com/zwF1Ywf.jpg');
+  background-repeat: round; */
+
 }
 
 /* Grid D */
 .l-footer {
-  border: var(--green-border);
-  grid-area: 4 / 1 / 4 / span 4;
+  border: var(--purple-border);
+  grid-row: 4 / 5;
+  grid-column: 1 / 5;
+
+  background-color: var(--project-background-1);
+  /* background-image: url('https://i.imgur.com/zwF1Ywf.jpg');
+  background-repeat: round; */
+
+  /* Sub Flexbox */
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
 }
 
-/* ----------------------- SECTIONAL LEVEL ----------------------- */
 
 
-/* ---------------- HEADER ---------------- */
+/* -------------------------| SECTIONAL LEVEL |-------------------------- */
+
+
+/* -------------- HEADER -------------- */
 
 /* HEADER LAYOUT [L] */
 
-.l-header__title {}
+.l-header__title {
+  border: var(--red-border);
+  order: 2;
+  flex: auto;
+}
 
-.l-header__title-socket {}
+.l-header__title-socket {
+  border: var(--blue-border);
+}
 
-.l-header__nav {}
+.l-header__nav {
+  border: var(--red-border);
+  order: 1;
+  flex: 1;
+}
 
-.l-header__nav-socket {}
+.l-header__nav-socket {
+  border: var(--blue-border);
+}
 
 
 /* HEADER COMPONENTS [C] */
 
-.c-title {}
+.c-title {
+  border: var(--green-border);
+}
 
 .c-title__text {}
 
-.c-nav {}
+.c-nav {
+  border: var(--green-border);
+}
 
 .c-nav__list {}
 
@@ -75,18 +140,25 @@ body {
 
 
 
-/* ---------------- INTRO ---------------- */
+/* -------------- INTRO -------------- */
 
 /* INTRO LAYOUT [L] */
 
-.l-intro__banner {}
+.l-intro__banner {
+  border: var(--red-border);
+  margin: var(--main-margin);
+}
 
-.l-intro__banner-socket {}
+.l-intro__banner-socket {
+  border: var(--blue-border);
+}
 
 
 /* INTRO COMPONENTS [C] */
 
-.c-banner {}
+.c-banner {
+  border: var(--green-border);
+}
 
 .c-banner__text {}
 
@@ -94,38 +166,92 @@ body {
 
 
 
-/* ---------------- PORTFOLIO ---------------- */
+
+/* ------------ PORTFOLIO -------------- */
 
 /* PORTFOLIO LAYOUT [L] */
 
+/* Sub-Grid */
+.l-portfolio-sub-grid {
+  border: var(--red-border);
+  /* margin-left: 12.5%;
+  margin-right: 12.5%; */
+  margin: var(--main-margin);
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+
 /* Sub-Grid A */
-.l-portfolio__title {}
+.l-portfolio__title {
+  border: var(--green-border);
+  background-color: var(--project-background-2);
+  grid-column: span 2;
+}
 
 .l-portfolio__title-socket {}
 
 
 /* Sub-Grid B */
-.l-portfolio__project-1 {}
+.l-portfolio__project-1 {
+  border: var(--green-border);
+  background-color: var(--project-background-4);
+  grid-column: span 1;
+}
 
 .l-portfolio__project-1-socket {}
 
 
 /* Sub-Grid C */
-.l-portfolio__project-2 {}
+.l-portfolio__project-2 {
+  border: var(--green-border);
+  background-color: var(--project-background-3);
+  grid-column: span 1;
+}
 
 .l-portfolio__project-2-socket {}
 
 
 /* Sub-Grid D */
-.l-portfolio__project-3 {}
+.l-portfolio__project-3 {
+  border: var(--green-border);
+  background-color: var(--project-background-2);
+  grid-column: span 2;
+}
 
 .l-portfolio__project-3-socket {}
 
 
 /* Sub-Grid E */
-.l-portfolio__project-4 {}
+.l-portfolio__project-4 {
+  border: var(--green-border);
+  background-color: var(--project-background-3);
+  grid-column: span 1;
+}
 
 .l-portfolio__project-4-socket {}
+
+/* Sub-Grid F */
+
+.l-portfolio__project-5 {
+  border: var(--green-border);
+  background-color: var(--project-background-4);
+  grid-column: span 1;
+}
+
+.l-portfolio__project-5-socket {}
+
+/* Sub-Grid G */
+
+.l-portfolio__project-6 {
+  border: var(--green-border);
+  background-color: var(--project-background-2);
+  grid-column: span 2;
+}
+
+.l-portfolio__project-6-socket {}
+
 
 
 /* PORTFOLIO COMPONENTS [C] */
@@ -154,54 +280,87 @@ body {
 
 .c-project-2 {}
 
-.c-project-1__img {}
+.c-project-2__img {}
 
-.c-project-1__title {}
+.c-project-2__title {}
 
-.c-project-1__disc {}
+.c-project-2__disc {}
 
-.c-project-1__link {}
+.c-project-2__link {}
 
 
 /* Sub-Grid D */
 
 .c-project-3 {}
 
-.c-project-1__img {}
+.c-project-3__img {}
 
-.c-project-1__title {}
+.c-project-3__title {}
 
-.c-project-1__disc {}
+.c-project-3__disc {}
 
-.c-project-1__link {}
+.c-project-3__link {}
 
 
 /* Sub-Grid E */
 
 .c-project-4 {}
 
-.c-project-1__img {}
+.c-project-4__img {}
 
-.c-project-1__title {}
+.c-project-4__title {}
 
-.c-project-1__disc {}
+.c-project-4__disc {}
 
-.c-project-1__link {}
+.c-project-4__link {}
+
+/* Sub-Grid F */
+
+.c-project-5 {}
+
+.c-project-5__img {}
+
+.c-project-5__title {}
+
+.c-project-5__disc {}
+
+.c-project-5__link {}
+
+
+/* Sub-Grid G */
+
+.c-project-6 {}
+
+.c-project-6__img {}
+
+.c-project-6__title {}
+
+.c-project-6__disc {}
+
+.c-project-6__link {}
 
 
 
-/* ---------------- FOOTER ---------------- */
+/* -------------- FOOTER -------------- */
 
 /* FOOTER LAYOUT [L] */
 
-.l-footer__contact {}
+.l-footer__contact {
+  border: var(--red-border);
+  margin: var(--main-margin);
+  flex: auto;
+}
 
-.l-footer__contact-socket {}
+.l-footer__contact-socket {
+  border: var(--blue-border);
+}
 
 
 /* FOOTER COMPONENTS [C] */
 
-.c-contact {}
+.c-contact {
+  border: var(--green-border);
+}
 
 .c-contact__title {}
 
@@ -209,17 +368,16 @@ body {
 
 .c-contact__link {}
 
-.c-contact__img {}
 
 
 
 
+/* ----------------------------| MEDIA QUERIES |------------------------- */
 
-
-/* Media queries under 700px */
+/* Media queries < 700px */
 
   /* @media (min-width: 700px) {} */
 
-/* Media queries under 500px */
+/* Media queries < 500px */
 
   /* @media (min-width: 500px) {} */
